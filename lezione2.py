@@ -35,3 +35,14 @@ message: str = f"{famous_person} una volta ha detto: L'uomo è poco se stesso qu
 
 print(message)
 
+#2-8. File Extensions: Python has a removesuffix() method that works exactly like removeprefix(). 
+#Assign the value 'python_notes.txt' to a variable called filename. 
+#Then use the removesuffix() method to display the filename without the file extension, like some file browsers do.
+
+filename = "python_notes.txt"
+
+filename_without_extension = filename.removesuffix(".txt")
+
+print(filename_without_extension)
+
+#
