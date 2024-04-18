@@ -61,3 +61,14 @@ print(f"{names[0]} dove andiamo a skaetare oggi?")
 print(f"{names[1]} dove andiamo a skaetare oggi?")
 print(f"{names[2]} dove andiamo a skaetare oggi?")
 
+#3-3. Your Own List: Think of your favorite mode of transportation, such as a motorcycle or a car, 
+#and make a list that stores several examples. Use your list to print a series of statements about these items, 
+#such as “I would like to own a Honda motorcycle.”
+
+car: list = ["KTM", "Honda", "Yamaha", "Ducati"]
+
+print(f"I would like to own a {car[0]} motorcycle.")
+print(f"I would like to own a {car[1]} motorcycle.")
+print(f"I would like to own a {car[2]} motorcycle.")
+print(f"I would like to own a {car[3]} motorcycle.")
+
