@@ -6,3 +6,12 @@ name: str = "Mario"
 message: str = f"Ciao {name}, ti va di imparare un po di python oggi?"
 
 print(message)
+
+#2-4. Name Cases: Use a variable to represent a person’s name, and then print that person’s name in lowercase, 
+#uppercase, and title case.
+
+name: str = "Luigi"
+
+print(f"{name}, {name.upper()}, {name.lower()}") 
+
+#oppure creo due nuove variabili a cui assegnare i due nuovi valori, questo semplifica la lettura e il dubugging
