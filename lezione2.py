@@ -15,3 +15,23 @@ name: str = "Luigi"
 print(f"{name}, {name.upper()}, {name.lower()}") 
 
 #oppure creo due nuove variabili a cui assegnare i due nuovi valori, questo semplifica la lettura e il dubugging
+
+#2-5. Famous Quote: Find a quote from a famous person you admire. Print the quote and the name of its author. 
+#Your output should look something like the following, including the quotation marks: 
+#Albert Einstein once said, “A person who never made a mistake never tried anything new.”
+
+author: str = "Oscar Wilde"
+
+quote: str = "L'uomo è poco se stesso quando parla in prima persona. Dategli una maschera e vi dirà la verità."
+
+print(f"{author} una volta ha detto: {quote}") 
+
+#2-6. Famous Quote 2: Repeat Exercise 2-5, but this time, represent the famous person’s name using a variable called famous_person. 
+#Then compose your message and represent it with a new variable called message. Print your message. 
+
+famous_person: str = "Oscar Wilde"
+
+message: str = f"{famous_person} una volta ha detto: L'uomo è poco se stesso quando parla in prima persona. Dategli una maschera e vi dirà la verità."
+
+print(message)
+
