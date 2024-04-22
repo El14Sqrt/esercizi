@@ -19,10 +19,13 @@ def is_pal(x: int) -> bool:
 s: str = "oggi è lunedì"
 
 #modo 1
+"""
 l: list[str] = s.split()
 return len(1[-1])
+"""
 
 #modo 2
+"""
 i: int = 0
 curr_len: int = 0
 while i < len(s):
@@ -30,3 +33,42 @@ while i < len(s):
         curr_len += 1
     else:
         break
+"""
+
+#dato un intero col_number, restituire il suo corrispondente titolo di colonna come su un foglio  excel
+
+def convert_to_title(col_number: int) ->str:
+    #curr_char = chr(ord("A") + (col_number-1))
+
+    result: str = ""
+    while col_number > 0:
+        resto: int = (col_number - 1) % 26 
+        result = chr(resto + ord("A")) + result
+        col_number = (col_number - 1) // 26
+    return result
+
+
+#data una lista nums di n elementi, restituire l'elemento che compare più di n/2 volte.
+
+def majority_element(nums: list[int]) -> int:
+    d: dict[int, int] = {}
+    for i in nums:
+        d[i] = nums.count(i)
+
+    length = len(nums)
+    for key in d:
+        d[key] /= length
+        if d[key] > 0.5:
+            return key
+    
+    return None
+
+#la prima parte può essere sostituita da d: dict[int, int] = dict(Counter(nums))
+
+#oppure ancora:
+"""
+for i in nums:
+    if nums.count(i) > len(nums) /2:
+        return i
+return None
+"""
