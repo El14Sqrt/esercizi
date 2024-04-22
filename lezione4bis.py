@@ -83,3 +83,14 @@ def move_zeroes(nums_list: list[int]):
             nums_list.append(x)
     
     return nums_list
+
+#restituisci l'intersezione
+
+def intersection(nums1: list[int], nums2: list[int]) -> list[int]:
+    nums1_s = set(nums1)
+    nums2_s = set (nums2)
+    common_numbers = []
+    for el in nums1_s:
+        if el in nums2_s:
+            common_numbers.append(el)
+    return common_numbers
