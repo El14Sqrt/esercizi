@@ -72,3 +72,14 @@ for i in nums:
         return i
 return None
 """
+
+#data una lista nums  di int , spostare gli zeri alla fine di questa lista 
+#mantenendo l'ordine originale dei numeri che nn sono zeri
+
+def move_zeroes(nums_list: list[int]):
+    for i in nums_list:
+        if i == 0:
+            x = nums_list.remove(i)
+            nums_list.append(x)
+    
+    return nums_list
