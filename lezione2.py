@@ -76,7 +76,7 @@ print(f"I would like to own a {car[3]} motorcycle.")
 #Make a list that includes at least three people you’d like to invite to dinner. 
 #Then use your list to print a message to each person, inviting them to dinner.
 
-invited = ["Michael Schumacher", "Ayrton Senna", "Charles Leclerc"]
+invited = ["Michael Schumacher", "Lewis Hamilton", "Charles Leclerc"]
 
 print(f"Ciao {invited[0]}, sei invitato a cena domani sera!")
 print(f"Ciao {invited[1]}, sei invitato a cena domani sera!")
@@ -115,4 +115,21 @@ print(f"Ciao {invited[2]}, sei invitato a cena domani sera!")
 #• Use append() to add one new guest to the end of your list.
 
 #• Print a new set of invitation messages, one for each person in your list.
+
+print(f"Ciao {invited[0]}! Ho più posto a tavola del previsto, inviterò altre persone e volevo informarti.")
+print(f"Ciao {invited[1]}! Ho più posto a tavola del previsto, inviterò altre persone e volevo informarti.")
+print(f"Ciao {invited[2]}! Ho più posto a tavola del previsto, inviterò altre persone e volevo informarti.")
+
+invited.insert (0, "Fernando Alonso")
+invited.insert (2, "Niki Lauda")
+invited.append ("Ayrton Senna")
+
+print(invited)
+
+print(f"Ciao {invited[0]}, sei invitato a cena domani sera!")
+print(f"Ciao {invited[1]}, sei invitato a cena domani sera!")
+print(f"Ciao {invited[2]}, sei invitato a cena domani sera!")
+print(f"Ciao {invited[3]}, sei invitato a cena domani sera!")
+print(f"Ciao {invited[4]}, sei invitato a cena domani sera!")
+print(f"Ciao {invited[5]}, sei invitato a cena domani sera!")
 
