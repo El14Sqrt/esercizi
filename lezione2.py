@@ -155,6 +155,10 @@ invited.insert (2, "Niki Lauda")
 
 invited.append ("Ayrton Senna")
 
+print(invited)
+
+invited_length = len(invited)   #necessary for exercise 3-9
+
 #• Print a new set of invitation messages, one for each person in your list.
 
 print(f"Ciao {invited[0]}, sei invitato a cena domani sera!")
@@ -252,4 +256,9 @@ print(locations)
 
 
 
-#   
+#3-9. 
+#Dinner Guests: Working with one of the programs from Exercises 3, 
+#use len() to print a message indicating the number of people you’re inviting to dinner.
+
+print(invited_length) #variabile creata nell'esercizio 3-6 usando len()
+
