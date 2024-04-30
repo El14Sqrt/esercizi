@@ -3,7 +3,7 @@
 #Store their first name, last name, age, and the city in which they live. 
 #You should have keys such as first_name, last_name, age, and city. 
 
-person = {
+person1 = {
     "first_name" : "Mario",
     "last_name" : "Rossi",
     "age" : 30,
@@ -12,10 +12,10 @@ person = {
 
 #Print each piece of information stored in your dictionary.
 
-print(person["first_name"])
-print(person["last_name"])
-print(person["age"])
-print(person["city"])
+print(person1["first_name"])
+print(person1["last_name"])
+print(person1["age"])
+print(person1["city"])
 
 
 
@@ -71,4 +71,32 @@ print("elif:\n", glossary["elif"])
 
 
 
-#
+#6-7. 
+#People: Start with the program you wrote for Exercise 6-1. 
+#Make two new dictionaries representing different people, and store all three dictionaries in a list called people. 
+
+person2 = {
+    "first_name" : "Gabriele",
+    "last_name" : "Ricci",
+    "age" : 20,
+    "city" : "Firenze"
+}
+
+
+person3 = {
+    "first_name" : "Mattia",
+    "last_name" : "Colombo",
+    "age" : 40,
+    "city" : "Bologna"
+}
+
+people = [person1, person2, person3]
+
+#Loop through your list of people. As you loop through the list, print everything you know about each person.
+
+for person in people:
+    print("First Name:", person["first_name"])
+    print("Last Name:", person["last_name"])
+    print("Age:", person["age"])
+    print("City:", person["city"])
+    
