@@ -26,13 +26,15 @@ favorite_book("'Ventimila leghe sotto i mari'")
 #T-Shirt: Write a function called make_shirt() that accepts a size and the text of a message 
 #that should be printed on the shirt. 
 #The function should print a sentence summarizing the size of the shirt and the message printed on it. 
-#Call the function once using positional arguments to make a shirt. 
-#Call the function a second time using keyword arguments.
 
 def make_shirt(size, message):
     print("You've ordered a", size, "with written on it:", message)
 
+#Call the function once using positional arguments to make a shirt. 
+
 make_shirt("medium", "Good Weekend!")
+
+#Call the function a second time using keyword arguments.
 
 make_shirt(size="large", message="I like snakes")
 
@@ -56,13 +58,31 @@ make_shirt(size="small", message="I'm learning Python")
 #Cities: Write a function called describe_city() that accepts the name of a city and its country. 
 #The function should print a simple sentence, such as Reykjavik is in Iceland. 
 #Give the parameter for the country a default value. 
-#Call your function for three different cities, at least one of which is not in the default country.
 
 def describe_city(city_name, country_name = "Italy"):
     print(city_name + " is in " + country_name)
+
+#Call your function for three different cities, at least one of which is not in the default country.
+
 describe_city("Rome")
 describe_city("Naples")
 describe_city("London", "UK")
+
+
+
+#8-6. 
+#City Names: Write a function called city_country() that takes in the name of a city and its country. 
+#The function should return a string formatted like this: "Santiago, Chile". 
+
+def city_country(city, country):
+    return city + ", " + country
+
+#Call your function with at least three city-country pairs, and print the values that are returned.
+
+print(city_country("Madrid", "Spain"))
+print(city_country("Tokyo", "Japan"))
+print(city_country("Paris", "France"))
+print(city_country("Berlin", "Germany"))
 
 
 
