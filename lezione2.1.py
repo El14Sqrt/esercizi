@@ -163,4 +163,40 @@ print(favourite_numbers)
 
 
 
-#
+#6-11. 
+#Cities: Make a dictionary called cities. Use the names of three cities as keys in your dictionary. 
+#Create a dictionary of information about each city and include the country that the city is in, 
+#its approximate population, and one fact about that city. 
+#The keys for each city’s dictionary should be something like country, population, and fact. 
+
+cities = {
+    "Roma" : {
+        "country" : "Italia",
+        "population" : "3 milioni",
+        "fact" : "è la città più bella del mondo"
+    },
+    "Londra" : {
+        "country" : "UK",
+        "population" : "9 milioni",
+        "fact" : "si guida a destra"
+    },
+    "Berlino" : {
+        "country" : "Germania",
+        "population" : "4 milioni",
+        "fact" : "c'era il muro"
+    }
+}
+
+#Print the name of each city and all of the information you have stored about it.
+
+print(cities["Berlino"])
+print(cities["Londra"])
+print(cities["Roma"])
+
+
+
+#6-12. 
+#Extensions: We’re now working with examples that are complex enough that they can be extended in any number of ways. 
+#Use one of the example programs from this chapter, and extend it by adding new keys and values, 
+#changing the context of the program, or improving the formatting of the output.
+
