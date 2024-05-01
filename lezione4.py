@@ -15,10 +15,10 @@ display_message()
 #The function should print a message, such as "One of my favorite books is Alice in Wonderland". 
 #Call the function, making sure to include a book title as an argument in the function call.
 
-def favorite_book(title)
+def favorite_book(title):
     print("One of my favorite books is ", title)
 
-favorite_book("Ventimila leghe sotto i mari")
+favorite_book("'Ventimila leghe sotto i mari'")
 
 
 
@@ -49,6 +49,20 @@ make_shirt()
 make_shirt(size="medium")
 
 make_shirt(size="small", message="I'm learning Python")
+
+
+
+#8-5. 
+#Cities: Write a function called describe_city() that accepts the name of a city and its country. 
+#The function should print a simple sentence, such as Reykjavik is in Iceland. 
+#Give the parameter for the country a default value. 
+#Call your function for three different cities, at least one of which is not in the default country.
+
+def describe_city(city_name, country_name = "Italy"):
+    print(city_name + " is in " + country_name)
+describe_city("Rome")
+describe_city("Naples")
+describe_city("London", "UK")
 
 
 
