@@ -271,4 +271,29 @@ for user in usernames:
 
 
 
+#5-9. 
+#No Users: Add an if test to hello_admin.py to make sure the list of users is not empty.
+
+#• If the list is empty, print the message We need to find some users!
+
+if len(usernames) != 0:
+    # The list is not empty
+    print("There are users in the list.")
+else:
+    # The list is empty
+    print("We need to find some users!")
+
+#• Remove all of the usernames from your list, and make sure the correct message is printed.
+
+usernames.clear()
+
+if len(usernames) != 0:
+    # The list is not empty
+    print("There are users in the list.")
+else:
+    # The list is empty
+    print("We need to find some users!")
+
+
+
 #
