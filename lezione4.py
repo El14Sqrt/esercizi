@@ -187,3 +187,28 @@ send_messages()
 
 print("original list: ", text_messages)
 print("sent", sent_messages)
+
+
+
+
+#8-12. 
+#Sandwiches: Write a function that accepts a list of items a person wants on a sandwich. 
+#The function should have one parameter that collects as many items as the function call provides, 
+#and it should print a summary of the sandwich that’s being ordered. 
+
+def make_sandwich(*items):
+    print("You have ordered a sandwich with:")
+    for item in items:
+        print("- " + item)
+
+    #The * before the parameter name items collects any number of arguments passed to the function into a tuple called items.
+
+#Call the function three times, using a different number of arguments each time.
+
+make_sandwich("ham", "cheese", "lettuce")
+make_sandwich("mayo", "bacon")
+make_sandwich("tomato", "olives")
+
+
+
+#
