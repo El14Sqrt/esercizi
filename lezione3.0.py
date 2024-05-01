@@ -80,6 +80,41 @@ print(sum(numbers))
 #Use a for loop to print each number.
 
 odd_numbers = list(range(1, 21, 2))
-for i in odd_numbers:
-    print(i)
+for odd in odd_numbers:
+    print(odd)
+
+
+
+#4-7. 
+#Threes: Make a list of the multiples of 3, from 3 to 30. Use a for loop to print the numbers in your list.
+
+multiples_of_3 = list(range(3, 31, 3))
+
+for multiple in multiples_of_3:
+    print(multiple)
+
+
+
+#4-8. 
+#Cubes: A number raised to the third power is called a cube. 
+#For example, the cube of 2 is written as 2**3 in Python. 
+#Make a list of the first 10 cubes (that is, the cube of each integer from 1 through 10), 
+#and use a for loop to print out the value of each cube.
+
+
+bases = list(range(1, 11))
+cubes = []
+
+for base in bases:
+    cubes.append(base**3)
+
+print(cubes)
+
+
+
+#4-9. 
+#Cube Comprehension: Use a list comprehension to generate a list of the first 10 cubes.
+
+cubes = [b**3 for b in range(1, 11)]
+print(cubes)
 
