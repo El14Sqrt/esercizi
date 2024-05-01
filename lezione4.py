@@ -114,4 +114,36 @@ print(album3)
 
 
 
+
+#8-8. 
+#User Albums: Start with your program from Exercise 8-7.  
+#Write a while loop that allows users to enter an album’s artist and title. 
+#Once you have that information, call make_album() with the user’s input and print the dictionary that’s created. 
+#Be sure to include a quit value in the while loop.
+
+while True:
+    artist = input("write artist's name (or 'q' to quit): ")
+    if artist.lower() == 'q':
+        break
+    title = input("write album's title: ")
+    album = make_album(artist, title)
+    print("Album created:", album)
+
+
+
+
+#8-9. 
+#Messages: Make a list containing a series of short text messages. 
+#Pass the list to a function called show_messages(), which prints each text message.
+
+text_messages: list = ["Hi, how are you today?", "Good afternoon!", "Do you want to hang out?"]
+
+def show_messages():
+    for message in text_messages:
+        print(message)
+
+show_messages() 
+
+
+
 #
