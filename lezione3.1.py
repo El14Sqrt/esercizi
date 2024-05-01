@@ -206,7 +206,8 @@ elif alien_color == "red":
 
 #• If the person is age 65 or older, print a message that the person is an elder.
 
-age = int(input())
+age = 5
+#age = int(input())
 
 if age < 2:
     print("That person is a baby")
@@ -220,3 +221,32 @@ elif age >= 20 and age < 65:
     print("That person is an adult")
 else:
     print("That person is an elder")
+
+
+
+#5-7. 
+#Favorite Fruit: Make a list of your favorite fruits, 
+#and then write a series of independent if statements that check for certain fruits in your list.
+
+#• Make a list of your three favorite fruits and call it favorite_fruits.
+
+favourite_fruits: list = ["strawberry", "watermelon", "banana"]
+
+#• Write five if statements. Each should check whether a certain kind of fruit is in your list. 
+#If the fruit is in your list, the if block should print a statement, such as You really like Apples!
+
+if "strawberry" in favourite_fruits:
+    print("You really like Strawberries!")
+
+if "apple" in favourite_fruits:
+    print("You really like Apples!")
+
+if "watermelon" in favourite_fruits:
+    print("You really like Watermelons!")
+
+if "orange" in favourite_fruits:
+    print("You really like Oranges!")
+
+if "banana" in favourite_fruits:
+    print("You really like Bananas!")
+
