@@ -99,4 +99,68 @@ for person in people:
     print("Last Name:", person["last_name"])
     print("Age:", person["age"])
     print("City:", person["city"])
-    
+
+
+
+#6-8. 
+#Pets: Make several dictionaries, where each dictionary represents a different pet. 
+#In each dictionary, include the kind of animal and the owner’s name. 
+
+dog = {
+    "specie" : "husky",
+    "owner" : "Marta"
+}
+cat = {
+    "specie" : "siamese",
+    "owner" : "Filippo"
+}
+bird = {
+    "specie" : "pappagallo Ara",
+    "owner" : "Giacomo"
+}
+
+#Store these dictionaries in a list called pets. 
+
+pets = [dog, cat, bird]
+
+#Next, loop through your list and as you do, print everything you know about each pet. 
+
+for pet in pets:
+    print("specie: ", pet["specie"])
+    print("owner's name: ", pet["owner"])
+
+
+
+#6-9. 
+#Favorite Places: Make a dictionary called favorite_places. 
+#Think of three names to use as keys in the dictionary, and store one to three favorite places for each person. 
+#To make this exercise a bit more interesting, ask some friends to name a few of their favorite places. 
+
+favourite_places = {
+    "Michele" : "Milano",
+    "Simone" : "Genova",
+    "Giorgio" : "Napoli"
+}
+
+#Loop through the dictionary, and print each person’s name and their favorite places.
+
+for names in favourite_places:
+    print(names, "'s favourite place is ", favourite_places[names])
+
+
+
+#6-10. 
+#Favorite Numbers: Modify your program from Exercise 6-2 so each person can have more than one favorite number. 
+#Then print each person’s name along with their favorite numbers.
+
+favourite_numbers["Francesco"] = [15,18,21]
+favourite_numbers["Federico"] = [28,12,33]
+favourite_numbers["Tobia"] = [32,44,35]
+favourite_numbers["Leonardo"] = [23,52,82]
+favourite_numbers["Vittorio"] = [42,5,71]
+
+print(favourite_numbers)
+
+
+
+#
