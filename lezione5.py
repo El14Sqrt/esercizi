@@ -80,4 +80,51 @@ print(rotate_left([1, 2, 3, 4, 5], 8))
 """
 
 #ESERCIZIO 6
-#
+#Scrivi una funzione che, data una lista, ritorni un dictionary che mappa ogni elemento alla sua frequenza nella lista.
+#esempio: print(frequency_dict(['mela', 'banana', 'mela'])) il risultato è: {'mela': 2, 'banana': 1}
+
+def frequency_dict(elements: list) -> dict:
+    freq_dict = {}              # Dizionario per memorizzare la frequenza di ciascun elemento
+    for item in elements:
+        if item in freq_dict:
+            freq_dict[item] += 1
+        else:
+            freq_dict[item] = 1
+    return freq_dict
+
+print(frequency_dict(['mela', 'banana', 'mela']))
+print(frequency_dict([1, 2, 2, 3, 3, 3]))
+
+
+#ESERCIZIO 7
+#Scrivi una funzione che verifica se in una stringa le parentesi '(' e ')' sono bilanciate, 
+#cioè per ogni parentesi che apre c'è la corrispondente parentesi che chiude.
+
+def check_parentheses(expression: str) -> bool:
+    stack = []               # Stack per tenere traccia delle parentesi aperte
+    for char in expression:
+        if char == '(':
+            stack.append(char)
+        elif char == ')':
+            if not stack or stack.pop() != '(':
+                return False
+    return len(stack) == 0
+
+print(check_parentheses("(()))("))
+print(check_parentheses("((()))"))
+
+
+#ESERCIZIO 8
+#Scrivi una funzione che conta e ritorna quante volte un elemento appare isolato in una lista di numeri interi. 
+#Un elemento è considerato isolato se non è affiancato sia a destra che a sinistra da elementi uguali.
+
+def count_isolated(numbers: list) -> int:
+    count = 0               # Contatore per tenere traccia del numero di elementi isolati
+    for i in range(len(numbers)):
+                            # Verifica se l'elemento corrente è isolato
+        if (i == 0 or numbers[i] != numbers[i-1]) and (i == len(numbers)-1 or numbers[i] != numbers[i+1]):
+            count += 1
+    return count
+
+print(count_isolated([1, 2, 2, 3, 3, 3, 4]))
+print(count_isolated([1, 2, 3, 4, 5]))
