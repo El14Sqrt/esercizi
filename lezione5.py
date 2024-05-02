@@ -43,3 +43,29 @@ def check_combination(conditionA: bool, conditionB: bool, conditionC: bool) -> s
 print(check_combination(True, False, True))
 print(check_combination(False, True, False))
 print(check_combination(False, True, True))
+
+
+#ESERCIZIO 4
+#Scrivi una funzione che rimuove tutti i duplicati da una lista, 
+#contenente sia numeri che lettere, mantenendo l'ordine originale degli elementi.
+
+def remove_duplicates() -> list:
+    
+
+#ESERCIZIO 5
+#Scrivi una funzione che ruota gli elementi di una lista verso sinistra di un numero specificato k di posizioni. 
+#La rotazione verso sinistra significa che ciascun elemento della lista viene spostato a sinistra di una posizione 
+#e l'elemento iniziale viene spostato alla fine della lista. Per la rotazione utilizzare lo slicing 
+#e gestire il caso in cui il numero specificato di posizioni sia maggiore della lunghezza della lista.
+"""
+def rotate_left(elements: list, k: int) -> list:
+    k = k % len(elements)  # Calcola il numero effettivo di posizioni da ruotare
+    rotated_elements = elements[k:] + elements[:k]
+    return rotated_elements
+
+print(rotate_left([1, 2, 3, 4, 5], 2))
+print(rotate_left([1, 2, 3, 4, 5], 8))
+"""
+
+#ESERCIZIO 6
+#
