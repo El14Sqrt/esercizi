@@ -49,8 +49,20 @@ print(check_combination(False, True, True))
 #Scrivi una funzione che rimuove tutti i duplicati da una lista, 
 #contenente sia numeri che lettere, mantenendo l'ordine originale degli elementi.
 
-def remove_duplicates() -> list:
-    
+def remove_duplicates(lst: list) -> list:
+    seen = set()                # Insieme per tenere traccia degli elementi unici già visti
+    result = []                 # Lista per mantenere l'ordine originale degli elementi unici
+    for item in lst:
+        if item not in seen:    # Se l'elemento non è già stato visto, lo aggiungiamo alla lista di risultati
+            result.append(item)
+            seen.add(item)      # Aggiungiamo l'elemento all'insieme degli elementi visti
+    return result
+
+print(remove_duplicates([]))
+print(remove_duplicates([1, 1, 1, 1]))
+print(remove_duplicates([4, 5, 'a', 4, 6]))
+
+	
 
 #ESERCIZIO 5
 #Scrivi una funzione che ruota gli elementi di una lista verso sinistra di un numero specificato k di posizioni. 
