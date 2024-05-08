@@ -28,9 +28,14 @@ r1.open_restaurant()
 #Three Restaurants: Start with your class from Exercise 9-1. 
 #Create three different instances from the class, and call describe_restaurant() for each instance.
 
-r2 = Restaurant(restaurant_name="", cuisine_type="")
-r3 = Restaurant(restaurant_name="", cuisine_type="")
-r4 = Restaurant(restaurant_name="", cuisine_type="")
+r2 = Restaurant(restaurant_name="Neko", cuisine_type="Sushi")
+r3 = Restaurant(restaurant_name="c1b0", cuisine_type="hamburger")
+r4 = Restaurant(restaurant_name="Il peperoncino", cuisine_type="pizzeria")
+
+r2.describe_restaurant()
+r3.describe_restaurant()
+r4.describe_restaurant()
+
 
 #9-4. 
 #Number Served: Start with your program from Exercise 9-1. 
