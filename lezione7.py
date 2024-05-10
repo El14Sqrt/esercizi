@@ -54,13 +54,24 @@ print(rimuovi_elementi([1, 2, 3, 2, 4], {2: 2}))
 #ESERCIZIO 4
 #Scrivi una funzione che prenda in input una lista di dizionari che rappresentano voti di studenti 
 #e aggrega i voti per studente in un nuovo dizionario.
-'''
-def aggrega_voti(voti: list[dict]) -> dict[str:list[int]]:
-    registro_voti: dict = {}
-    for nomi in voti
+
+def aggrega_voti(registro_voti: list[dict]) -> dict[str:list[int]]:
+    nuovo_registro_voti: dict = {}
+
+    for studente in registro_voti:
+        nome = studente["name"]
+        voto = studente["voto"]
+
+        if nome in nuovo_registro_voti:
+            nuovo_registro_voti[nome].append(voto)
+        else:
+            nuovo_registro_voti[nome] = [voto]
+    
+    return nuovo_registro_voti
+
 
 print(aggrega_voti([{'nome': 'Alice', 'voto': 90}, {'nome': 'Bob', 'voto': 75}, {'nome': 'Alice', 'voto': 85}]))
-'''
+
 
 #ESERCIZIO 5
 #Scrivi una funzione che accetti un dizionario di prodotti con i prezzi 
