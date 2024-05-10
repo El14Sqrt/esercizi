@@ -54,9 +54,24 @@ print(rimuovi_elementi([1, 2, 3, 2, 4], {2: 2}))
 #ESERCIZIO 4
 #Scrivi una funzione che prenda in input una lista di dizionari che rappresentano voti di studenti 
 #e aggrega i voti per studente in un nuovo dizionario.
+'''
+def aggrega_voti(voti: list[dict]) -> dict[str:list[int]]:
+    registro_voti: dict = {}
+    for nomi in voti
 
-#def aggrega_voti(voti: list[dict]) -> dict[str:list[int]]:
+print(aggrega_voti([{'nome': 'Alice', 'voto': 90}, {'nome': 'Bob', 'voto': 75}, {'nome': 'Alice', 'voto': 85}]))
+'''
 
+#ESERCIZIO 5
+#Scrivi una funzione che accetti un dizionario di prodotti con i prezzi 
+#e restituisca un nuovo dizionario con solo i prodotti che hanno un prezzo superiore a 20, scontati del 10%.
 
-#print(aggrega_voti([{'nome': 'Alice', 'voto': 90}, {'nome': 'Bob', 'voto': 75}, {'nome': 'Alice', 'voto': 85}]))
+def filtra_e_mappa(prodotti: dict[str:float]) -> dict[str:float]:
+    offerte = {}
+    for prodotto, prezzo in prodotti.items():
+        if prezzo >= 20.0:
+            prezzo_scontato: float = prezzo - (prezzo * 10/100)
+            offerte[prodotto] = prezzo_scontato
+    return offerte
 
+print(filtra_e_mappa({'Penna': 15.0, 'Zaino': 50.0, 'Quaderno': 22.0}))
