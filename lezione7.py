@@ -75,3 +75,38 @@ def filtra_e_mappa(prodotti: dict[str:float]) -> dict[str:float]:
     return offerte
 
 print(filtra_e_mappa({'Penna': 15.0, 'Zaino': 50.0, 'Quaderno': 22.0}))
+
+
+#ESERCIZIO 6
+
+#PARTE 1
+#Scrivi una funzione chiamata create_contact() che accetta il nome e cognome, e-mail (facoltativo) e numero di telefono (facoltativo). 
+#La funzione dovrebbe restituire un dizionario con i dettagli del contatto.
+ 
+def create_contact(name: str, email: str=None, telefono: int=None) -> dict:
+    contatto = {"profile":name, "email":email, "telefono":telefono}
+
+    return contatto
+
+contatto1 = create_contact("Mario Rossi", email="mario.rossi@gmail.com", telefono=788787)
+contatto2 = create_contact("Francesco Rossini", email="fra.si@gmail.com")
+
+print(contatto1, "\n", contatto2)
+
+#PARTE 2
+#Scrivi una funzione chiamata update_contact() che accetta il dizionario creato, il nome e cognome del contatto da aggiornare, 
+#e il dettaglio facoltativo da aggiornare. Questa funzione dovrebbe aggiornare il dizionario del contatto.
+
+def update_contact(contatto: dict, name: str, email: str =None, telefono: int=None) -> dict:
+    if contatto["profile"] == name: #controllare che sia il contatto che voglio modificare
+        if email:   #entra solo se è True, ovvero se è presente una mail
+            contatto["email"] = email
+        if telefono:
+            contatto["telefono"] = telefono
+    
+    return contatto
+
+update_contact(name="Francesco Rossini", email="fra.si@gmail.com", telefono=156489456)
+
+print(contatto2)
+
