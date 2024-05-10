@@ -106,7 +106,7 @@ def update_contact(contatto: dict, name: str, email: str =None, telefono: int=No
     
     return contatto
 
-update_contact(name="Francesco Rossini", email="fra.si@gmail.com", telefono=156489456)
+update_contact(contatto=contatto2, name="Francesco Rossini", email="fra.si@gmail.com", telefono=156489456)
 
 print(contatto2)
 
