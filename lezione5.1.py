@@ -250,5 +250,19 @@ admin03.privileges.show_privileges()
 #In a separate file, create an Admin instance and call show_privileges() 
 #to show that everything is still working correctly.
 
+# main.py
+
+from 912_admin_module import Admin
+
+admin04 = Admin(first_name="Maria",
+                       last_name="Leon",
+                       age=51,
+                       email="mary@example.org",
+                       cf="IOFG48HD54HDDF546BF",
+                       privileges=["can add post", "can delete post", "can ban user", "can control user settings"])
+
+admin04.privileges.show_privileges()
+
+
 
 
