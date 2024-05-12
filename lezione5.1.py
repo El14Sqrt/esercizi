@@ -88,6 +88,12 @@ Ice_Cream_Stand_1 = IceCreamStand(["chocolate", "strawberry", "lemon", "cream"],
 Ice_Cream_Stand_1.show_flavors()
 
 
+#9-10. 
+#Imported Restaurant: Using your latest Restaurant class, store it in a module. 
+#Make a separate file that imports Restaurant. 
+#Make a Restaurant instance, and call one of Restaurant’s methods to show that the import statement is working properly.
+
+
 
 #9-3. 
 #Users: Make a class called User. Create two attributes called first_name and last_name, 
@@ -108,10 +114,30 @@ class User:
         self.cf=cf
         self.age=age
         self.email=email
+        self.login_attempts = 0
+
+    def describe_user(self):
+        print(f"User Information:\n"
+              f"First Name: {self.first_name}\n"
+              f"Last Name: {self.last_name}\n"
+              f"Age: {self.age}\n"
+              f"Email: {self.email}\n"
+              f"CF: {self.cf}")
+        
+    def greet_user(self):
+        print(f"Welcome back {self.first_name}! How are you today?")
+
+    def increment_login_attempts(self):
+        self.login_attempts += 1
     
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+
     def __str__(self) -> str:
         return f"L'utente corrente si chiama {self.first_name} {self.last_name}, ha {self.age} anni, il su CF è {self.cf} e la sua mail è {self.email}"
     
+
+
 user1 = User(first_name="Elia", 
              age=19,
              last_name="Squarti",
@@ -124,6 +150,17 @@ user2 = User(first_name="Diego",
              email="diegoemail@gmail.com",
              cf="unkown")
 
+
+print("\n")
+user1.describe_user()
+print("\n")
+user2.describe_user()
+
+user1.greet_user()
+user2.greet_user()
+
+
+
 #9-5. 
 #Login Attempts: Add an attribute called login_attempts to your User class from Exercise 9-3. 
 #Write a method called increment_login_attempts() that increments the value of login_attempts by 1. 
@@ -131,5 +168,45 @@ user2 = User(first_name="Diego",
 #Make an instance of the User class and call increment_login_attempts() several times. 
 #Print the value of login_attempts to make sure it was incremented properly, and then call reset_login_attempts(). 
 #Print login_attempts again to make sure it was reset to 0.
+
+print("\n")
+print("user1 Login attempts: ", user1.login_attempts)
+user1.increment_login_attempts()
+print("user1 Login attempts: ", user1.login_attempts)
+user1.increment_login_attempts()
+user1.increment_login_attempts()
+print("user1 Login attempts: ", user1.login_attempts)
+print("\n")
+user1.reset_login_attempts()
+print("user1 Login attempts: ", user1.login_attempts)
+
+#9-7. 
+#Admin: An administrator is a special kind of user. 
+#Write a class called Admin that inherits from the User class you wrote in Exercise 9-3 or Exercise 9-5. 
+#Add an attribute, privileges, that stores a list of strings like "can add post", "can delete post", "can ban user", 
+#and so on. Write a method called show_privileges() that lists the administrator’s set of privileges. 
+#Create an instance of Admin, and call your method. 
+
+
+
+#9-8. 
+#Privileges: Write a separate Privileges class. 
+#The class should have one attribute, privileges, that stores a list of strings as described in Exercise 9-7. 
+#Move the show_privileges() method to this class. Make a Privileges instance as an attribute in the Admin class. 
+#Create a new instance of Admin and use your method to show its privileges.
+
+
+
+#9-11. 
+#Imported Admin: Start with your work from Exercise 9-8. Store the classes User, Privileges, and Admin in one module. 
+#Create a separate file, make an Admin instance, and call show_privileges() to show that everything is working correctly.
+
+
+
+#9-12. 
+#Multiple Modules: Store the User class in one module, and store the Privileges and Admin classes in a separate module. 
+#In a separate file, create an Admin instance and call show_privileges() 
+#to show that everything is still working correctly.
+
 
 
