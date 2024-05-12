@@ -193,6 +193,7 @@ class Admin(User):
     def __init__(self, first_name: str, last_name: str, age: int, email: str, cf: str):
         super().__init__(first_name, last_name, age, email, cf)
 
+        #self.privileges = Privileges(privileges) ----> per l'esercizio successivo
         self.privileges = ["can add post", "can delete post", "can ban user", "can control user settings"]
 
     def show_privileges(self):
@@ -211,6 +212,20 @@ print("\n")
 #Move the show_privileges() method to this class. Make a Privileges instance as an attribute in the Admin class. 
 #Create a new instance of Admin and use your method to show its privileges.
 
+class Privilege:
+    def __init__(self, privileges:list[str]):
+        self.privileges=privileges
+
+    def show_privileges(self):
+        print(f"privileges: {self.privileges}")
+
+"""
+admin02 = Admin(first_name="Alice", last_name="Vegas", age=45, email="alicemail@example.net", cf="alice_cf", privileges=["can add post", "can delete post", "can ban user", "can control user settings"])
+
+admin02.privileges.show_privileges()
+"""
+
+print("\n")
 
 
 #9-11. 
