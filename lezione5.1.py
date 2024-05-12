@@ -66,6 +66,7 @@ r1.increment_number_served()
 print("customers served:", r1.number_served)
 
 
+
 #9-6. 
 #Ice Cream Stand: An ice cream stand is a specific kind of restaurant. 
 #Write a class called IceCreamStand that inherits from the Restaurant class you wrote in Exercise 9-1  or Exercise 9-4. 
@@ -73,6 +74,18 @@ print("customers served:", r1.number_served)
 #Add an attribute called flavors that stores a list of ice cream flavors. 
 #Write a method that displays these flavors. 
 #Create an instance of IceCreamStand, and call this method. 
+
+class IceCreamStand(Restaurant):
+    def __init__(self, flavors: list[str], restaurant_name: str, cuisine_type: str = None, number_served: int = 0):
+        super().__init__(restaurant_name, cuisine_type, number_served)
+    
+        self.flavors=flavors
+
+    def show_flavors(self):
+        print(f"The ice cream stand {self.restaurant_name} offers the following flavors of ice cream: {self.flavors}")
+
+Ice_Cream_Stand_1 = IceCreamStand(["chocolate", "strawberry", "lemon", "cream"], restaurant_name="Gelato Matto")
+Ice_Cream_Stand_1.show_flavors()
 
 
 
