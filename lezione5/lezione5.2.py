@@ -24,12 +24,19 @@ second_dice.roll_dice(10)
 third_dice.roll_dice(10)
 
 
+print("\n")
+
+
 
 #9-14. 
 #Lottery: Make a list or tuple containing a series of 10 numbers and 5 letters. 
-#Randomly select 4 numbers or letters from the list and print a message saying t
-#hat any ticket matching these 4 numbers or letters wins a prize.
+#Randomly select 4 numbers or letters from the list and print a message saying 
+#that any ticket matching these 4 numbers or letters wins a prize.
 
+alphanumeric_list: list = [5, 8, "c", 6, "o", "l", 9, 7, 44, 52, "z", "y", 41, 22, 77]
+
+random_items: list = random.sample(alphanumeric_list, 4)        #Genera una lista costruita con n elementi casuali della struttura dati z. Senza reinserimento. n ≤ len(z)
+print("any ticket matching these 4 items wins a prize: ", random_items)
 
 
 #9-15. 
