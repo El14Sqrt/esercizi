@@ -232,6 +232,17 @@ print("\n")
 #Imported Admin: Start with your work from Exercise 9-8. Store the classes User, Privileges, and Admin in one module. 
 #Create a separate file, make an Admin instance, and call show_privileges() to show that everything is working correctly.
 
+from lez_5_es_911_Imported_Admin import Admin
+
+admin03 = Admin(first_name="Andrea",
+                       last_name="Sila",
+                       age=82,
+                       email="andre@ndebfiu.com",
+                       cf="BIUFVR45RHRG56GRH",
+                       privileges=["can add post", "can delete post", "can ban user", "can control user settings"])
+
+admin03.privileges.show_privileges()
+
 
 
 #9-12. 
