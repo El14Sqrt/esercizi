@@ -9,9 +9,10 @@
 #Print the two attributes individually, and then call both methods.
 
 class Restaurant:
-    def __init__(self, restaurant_name:str, cuisine_type:str):
+    def __init__(self, restaurant_name:str, cuisine_type:str, number_served:int=0):
         self.restaurant_name = restaurant_name
         self.cuisine_type = cuisine_type
+        self.number_served = number_served
     
     def describe_restaurant(self):
         print(f"Restaurant(name: {self.restaurant_name}, cuisine: {self.cuisine_type})")
@@ -19,10 +20,19 @@ class Restaurant:
     def open_restaurant(self):
         print(f"Il ristorante {self.restaurant_name} è aperto.")
 
-r1 = Restaurant(restaurant_name="La vecchia Roma", cuisine_type="romana")
+    def set_number_served(self, new_number_served:int):
+        self.number_served = new_number_served
+
+    def increment_number_served(self):
+        self.number_served += 1
+
+    
+
+r1 = Restaurant(restaurant_name="La vecchia Roma", cuisine_type="romana", number_served= 45)
 
 r1.describe_restaurant()
 r1.open_restaurant()
+
 
 #9-2. 
 #Three Restaurants: Start with your class from Exercise 9-1. 
@@ -45,6 +55,24 @@ r4.describe_restaurant()
 #Call this method with a new number and print the value again. 
 #Add a method called increment_number_served() that lets you increment the number of customers who’ve been served. 
 #Call this method with any number you like that could represent how many customers were served in, say, a day of business. 
+
+print("Number of customers served:", r1.number_served)
+r1.set_number_served(50)
+print("New number of customers served:", r1.number_served)
+
+r1.increment_number_served()
+print("customers served:", r1.number_served)
+r1.increment_number_served()
+print("customers served:", r1.number_served)
+
+
+#9-6. 
+#Ice Cream Stand: An ice cream stand is a specific kind of restaurant. 
+#Write a class called IceCreamStand that inherits from the Restaurant class you wrote in Exercise 9-1  or Exercise 9-4. 
+#Either version of the class will work; just pick the one you like better. 
+#Add an attribute called flavors that stores a list of ice cream flavors. 
+#Write a method that displays these flavors. 
+#Create an instance of IceCreamStand, and call this method. 
 
 
 
@@ -90,4 +118,5 @@ user2 = User(first_name="Diego",
 #Make an instance of the User class and call increment_login_attempts() several times. 
 #Print the value of login_attempts to make sure it was incremented properly, and then call reset_login_attempts(). 
 #Print login_attempts again to make sure it was reset to 0.
+
 
