@@ -180,12 +180,28 @@ print("\n")
 user1.reset_login_attempts()
 print("user1 Login attempts: ", user1.login_attempts)
 
+
+
 #9-7. 
 #Admin: An administrator is a special kind of user. 
 #Write a class called Admin that inherits from the User class you wrote in Exercise 9-3 or Exercise 9-5. 
 #Add an attribute, privileges, that stores a list of strings like "can add post", "can delete post", "can ban user", 
 #and so on. Write a method called show_privileges() that lists the administrator’s set of privileges. 
 #Create an instance of Admin, and call your method. 
+
+class Admin(User):
+    def __init__(self, first_name: str, last_name: str, age: int, email: str, cf: str):
+        super().__init__(first_name, last_name, age, email, cf)
+
+        self.privileges = ["can add post", "can delete post", "can ban user", "can control user settings"]
+
+    def show_privileges(self):
+        print(f"Admin privileges: {self.privileges}")
+    
+admin01 = Admin(first_name="Bob", last_name="White", age=39, email="bobemail@boh.org", cf="NJINIO51E4G94R8B")
+admin01.show_privileges()
+
+print("\n")
 
 
 
