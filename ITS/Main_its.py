@@ -1,27 +1,9 @@
 from ITS.Building import Building
+from ITS.Course import Course
 from ITS.Group import Group
 from ITS.People.Student import Student
 from ITS.Room import Room
 
-
-class Course:
-    
-    def __init__(self, name: str):
-        self.name: str = name
-        self.groups: list[Group] = []
-        
-    def register(self, student: Student):
-        for group in self.get_groups():
-            if group.add_student(student):
-                break
-        
-    def get_groups(self) -> list[Group]:
-        return self.groups
-        
-    def add_group(self, group: Group):
-        if group and isinstance(group, Group)\
-            and group not in self.groups:
-            self.groups.append(group)
         
     
 smi = Building(name="SMI", address="Via Sierra Nevada 60", floors=[-2,3])
