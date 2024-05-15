@@ -8,7 +8,7 @@ class Animal:
         self.height=height
         self.width=width
         self.preferred_habitat=preferred_habitat
-        self.healt=health #=round(100 * (1 / self.age), 3) #non fare i round per le operazioni
+        self.healt=health ==round(100 * (1 / self.age), 3) #non fare i round per le operazioni
 
 
 class Fence:
@@ -16,6 +16,8 @@ class Fence:
         self.area=area
         self.temperature=temperature
         self.habitat=habitat
+        self.animals: list = []
+
 
 
 class ZooKeeper:
@@ -50,40 +52,7 @@ class Zoo:
         for f in self.fences:
             print(f"Fence(area={f.area}, temperature={f.temperature}, habitat={f.habitat})")
             print("with animals:")
-            for a in fence.animals:
+            in Fence, for a in self.animals:
                 print(f"Animal(name={a.name}, species={a.species}, age={a.age})")
             print("#" * 30)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#esempio di prova:
-samuele = ZooKeeper(name="Samuele", surname="Tacchia", id="54321")
 
