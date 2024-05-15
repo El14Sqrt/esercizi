@@ -7,13 +7,18 @@ class Animal:
      #def __str__(self) -> str:
         #return f"{self.__class__.__name__}(name={self.name}, age={self.age})
 
+
 class Cat(Animal):
     def __init__(self, specie: str, name: str, age: int) -> None:
         super().__init__(specie, name, age)
 
+
+
 class Rabbit(Animal):
     def __init__(self, specie: str, name: str, age: int) -> None:
         super().__init__(specie, name, age)
+
+
 
 class Person(Animal):
     def __init__(self, specie: str, age: int, name: str, surname:str, cf: str) -> None:
@@ -23,10 +28,13 @@ class Person(Animal):
         self.surname=surname
     
 
+
 class Student(Person):
     def __init__(self, specie: str, age: int, name: str, surname: str, cf: str, matricola:int) -> None:
         super().__init__(specie, age, name, surname, cf)
         self.matricola=matricola
+
+
 
 
 #a=Animal()
