@@ -12,6 +12,7 @@ class Animal:
         self.area_animal: float = self.height * self.width
         self.gabbia = None
 
+
 class Fence:
     def __init__(self, area:float, temperature:float, habitat:str):
         self.area=area #diminuisce ogni volta che faccio add_animal
@@ -40,14 +41,20 @@ class ZooKeeper:
             fence.area += animal.area_animal
 
     def clean(self, fence: Fence):
-        pass
-
+        clean_time: float =  (fence.total_area - fence.area) / fence.area
+        if  fence.area == 0:
+            return fence.total_area
+        else:
+            return clean_time
+        
     def feed(self, animal: Animal):
         if animal.gabbia + animal.area_animal >= (animal.height + animal.height * 0.02) * (animal.width + animal.width * 0.02):
             animal.healt += (animal.healt*1/100)
             animal.height += (animal.height*2/100)
             animal.width += (animal.width*2/100)
+            animal.area_animal = animal.width *animal.height
     
+
 
 class Zoo:
     def __init__(self, fences:list[Fence], zoo_keepers:list[ZooKeeper]):
