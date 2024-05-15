@@ -1,15 +1,16 @@
 #Sistema di gestione dello zoo virtuale
 
 class Animal:
-    def __init__(self, name:str, species:str, age:float, height:float, width:float, preferred_habitat:str, health: float = (100 * (1 / age), 3)):
+    def __init__(self, name:str, species:str, age:float, height:float, width:float, preferred_habitat:str, health: float = round(100 * (1 / age), 3)):
         self.name=name
         self.species=species
         self.age=age
         self.height=height
         self.width=width
         self.preferred_habitat=preferred_habitat
-        self.healt=round(health) #non fare i round per le operazioni
+        self.healt=health #non fare i round per le operazioni
         self.area_animal: float = self.height * self.width
+        self.gabbia = None
 
 class Fence:
     def __init__(self, area:float, temperature:float, habitat:str):
@@ -27,20 +28,25 @@ class ZooKeeper:
         self.surname=surname
         self.id=id
     
-    def add_animal(animal: Animal, fence: Fence):   #controllo habitat -> controllo area animale
+    def add_animal(self, animal: Animal, fence: Fence):   #controllo habitat -> controllo area animale
         if animal.preferred_habitat == fence.habitat and animal.area_animal <= fence.area: 
             fence.animals.append(animal)
             fence.area -= animal.area_animal
+            animal.gabbia = fence
 
-    def remove_animal(animal: Animal, fence: Fence):
-        fence.animals.remove(animal)
-        fence.area += animal.area_animal
+    def remove_animal(self, animal: Animal, fence: Fence):
+        if animal in fence.area:
+            fence.animals.remove(animal)
+            fence.area += animal.area_animal
 
-    def clean(fence: Fence):
+    def clean(self, fence: Fence):
         pass
 
-    def feed(animal: Animal):
-        pass
+    def feed(self, animal: Animal):
+        if animal.gabbia + animal.area_animal >= (animal.height + animal.height * 0.02) * (animal.width + animal.width * 0.02):
+            animal.healt += (animal.healt*1/100)
+            animal.height += (animal.height*2/100)
+            animal.width += (animal.width*2/100)
     
 
 class Zoo:
