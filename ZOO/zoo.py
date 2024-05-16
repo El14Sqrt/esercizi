@@ -8,7 +8,7 @@ class Animal:
         self.height=height
         self.width=width
         self.preferred_habitat=preferred_habitat
-        self.healt=round(100 * (1 / age), 3) #non fare i round per le operazioni
+        self.healt=round(100 * (1 / age), 3) 
         self.area_animal: float = self.height * self.width
         self.gabbia = None
 
@@ -85,21 +85,21 @@ class Zoo:
 
 
 
-#Caso di Test 1: Aggiunta di un Animale a un Recinto Adeguato
+#TEST CASE 1: Aggiunta di un Animale a un Recinto Adeguato
 
 zoo_keeper = ZooKeeper(name="Mario", surname="Rossi", id="001")
 fence = Fence(area=50.0, temperature=20.0, habitat="Savana")
 animal = Animal(name="Simba", species="Leone", age=3, height=1.2, width=2.0, preferred_habitat="Savana")
 zoo_keeper.add_animal(animal, fence)
 
-#Caso di Test 2: Aggiunta di un Animale a un Recinto Inadeguato (Habitat)
+#TEST CASE 2: Aggiunta di un Animale a un Recinto Inadeguato (Habitat)
 
 zoo_keeper = ZooKeeper(name="Mario", surname="Rossi", id="001")
 fence = Fence(area=50.0, temperature=20.0, habitat="Foresta")
 animal = Animal(name="Simba", species="Leone", age=3, height=1.2, width=2.0, preferred_habitat="Savana")
 zoo_keeper.add_animal(animal, fence)
 
-#Caso di Test 3: Rimozione di un Animale da un Recinto
+#TEST CASE 3: Rimozione di un Animale da un Recinto
 
 zoo_keeper = ZooKeeper(name="Mario", surname="Rossi", id="001")
 fence = Fence(area=50.0, temperature=20.0, habitat="Savana")
@@ -107,7 +107,7 @@ animal = Animal(name="Simba", species="Leone", age=3, height=1.2, width=2.0, pre
 zoo_keeper.add_animal(animal, fence)
 zoo_keeper.remove_animal(animal, fence)
 
-#Caso di Test 4: Pulizia di un Recinto con Animali
+#TEST CASE 4: Pulizia di un Recinto con Animali
 
 zoo_keeper = ZooKeeper(name="Mario", surname="Rossi", id="001")
 fence = Fence(area=50.0, temperature=20.0, habitat="Savana")
@@ -115,7 +115,7 @@ animal = Animal(name="Simba", species="Leone", age=3, height=1.2, width=2.0, pre
 zoo_keeper.add_animal(animal, fence)
 clean_time = zoo_keeper.clean(fence)
 
-#Caso di Test 5: Alimentazione di un Animale (Crescita e Salute)
+#TEST CASE 5: Alimentazione di un Animale (Crescita e Salute)
 
 zoo_keeper = ZooKeeper(name="Mario", surname="Rossi", id="001")
 fence = Fence(area=50.0, temperature=20.0, habitat="Savana")
@@ -123,7 +123,7 @@ animal = Animal(name="Simba", species="Leone", age=3, height=1.2, width=2.0, pre
 zoo_keeper.add_animal(animal, fence)
 zoo_keeper.feed(animal)
 
-#Caso di Test 6: Descrizione dello Zoo
+#TEST CASE 6: Descrizione dello Zoo
 
 zoo_keeper = ZooKeeper(name="Mario", surname="Rossi", id="001")
 fence = Fence(area=50.0, temperature=20.0, habitat="Savana")
@@ -132,7 +132,7 @@ zoo_keeper.add_animal(animal, fence)
 zoo = Zoo(fences=[fence], zoo_keepers=[zoo_keeper])
 zoo.describe_zoo()
 
-#Caso di Test 7: Aggiunta di Animali Multipli allo Stesso Recinto
+#TEST CASE 7: Aggiunta di Animali Multipli allo Stesso Recinto
 
 zoo_keeper = ZooKeeper(name="Mario", surname="Rossi", id="001")
 fence = Fence(area=50.0, temperature=20.0, habitat="Savana")
@@ -141,20 +141,20 @@ animal2 = Animal(name="Nala", species="Leone", age=4, height=1.1, width=1.8, pre
 zoo_keeper.add_animal(animal1, fence)
 zoo_keeper.add_animal(animal2, fence)
 
-#Caso di Test 8: Pulizia di un Recinto Vuoto
+#TEST CASE 8: Pulizia di un Recinto Vuoto
 
 zoo_keeper = ZooKeeper(name="Mario", surname="Rossi", id="001")
 fence = Fence(area=50.0, temperature=20.0, habitat="Savana")
 clean_time = zoo_keeper.clean(fence)
 
-#Caso di Test 9: Rimozione di un Animale da un Recinto Vuoto
+#TEST CASE 9: Rimozione di un Animale da un Recinto Vuoto
 
 zoo_keeper = ZooKeeper(name="Mario", surname="Rossi", id="001")
 fence = Fence(area=50.0, temperature=20.0, habitat="Savana")
 animal = Animal(name="Simba", species="Leone", age=3, height=1.2, width=2.0, preferred_habitat="Savana")
 zoo_keeper.remove_animal(animal, fence)
 
-#Caso di Test 10: Alimentazione di un Animale Senza Spazio Sufficiente
+#TEST CASE 10: Alimentazione di un Animale Senza Spazio Sufficiente
 
 zoo_keeper = ZooKeeper(name="Mario", surname="Rossi", id="001")
 fence = Fence(area=4.8, temperature=20.0, habitat="Savana")
