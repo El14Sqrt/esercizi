@@ -38,10 +38,12 @@ class ZooKeeper:
             animal.gabbia = fence
 
 
+
     def remove_animal(self, animal: Animal, fence: Fence):
-        if animal in fence.area:
+        if animal in fence.animals:
             fence.animals.remove(animal)
             fence.area += animal.area_animal
+
 
 
     def clean(self, fence: Fence):
@@ -52,12 +54,13 @@ class ZooKeeper:
             return clean_time
 
 
+
     def feed(self, animal: Animal):
-        if animal.gabbia + animal.area_animal >= (animal.height + animal.height * 0.02) * (animal.width + animal.width * 0.02):
+        if animal.gabbia.area + animal.area_animal >= (animal.height + (animal.height * 0.02)) * (animal.width + (animal.width * 0.02)):
             animal.healt += (animal.healt*1/100)
             animal.height += (animal.height*2/100)
             animal.width += (animal.width*2/100)
-            animal.area_animal = animal.width *animal.height
+            animal.area_animal = animal.width * animal.height
     
 
 
