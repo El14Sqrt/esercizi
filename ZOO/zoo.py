@@ -1,14 +1,14 @@
 #Sistema di gestione dello zoo virtuale
 
 class Animal:
-    def __init__(self, name:str, species:str, age:float, height:float, width:float, preferred_habitat:str, health: float = round(100 * (1 / age), 3)):
+    def __init__(self, name:str, species:str, age:float, height:float, width:float, preferred_habitat:str):
         self.name=name
         self.species=species
         self.age=age
         self.height=height
         self.width=width
         self.preferred_habitat=preferred_habitat
-        self.healt=health #non fare i round per le operazioni
+        self.healt=round(100 * (1 / age), 3) #non fare i round per le operazioni
         self.area_animal: float = self.height * self.width
         self.gabbia = None
 
@@ -65,7 +65,6 @@ class Zoo:
     def __init__(self, fences:list[Fence], zoo_keepers:list[ZooKeeper]):
         self.fences=fences
         self.zoo_keepers=zoo_keepers
-        self.animals=fence.animals
     
     
     def describe_zoo(self):
@@ -74,9 +73,10 @@ class Zoo:
             print(f"ZooKeeper(name={zk.name}, surname={zk.surname}, id={zk.id})")
         print("\nFences:")
         for f in self.fences:
-            print(f"Fence(area={f.area}, temperature={f.temperature}, habitat={f.habitat})")
-            print("with animals:")
-            for a in self.animals[Fence]:
-                print(f"Animal(name={a.name}, species={a.species}, age={a.age})")
-            print("#" * 30)
+            if f.animals != []:
+                print(f"Fence(area={f.area}, temperature={f.temperature}, habitat={f.habitat})")
+                print("with animals:")
+                for a in f.animals:
+                    print(f"Animal(name={a.name}, species={a.species}, age={a.age})")
+                print("#" * 30)
 
