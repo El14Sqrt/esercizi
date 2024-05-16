@@ -78,9 +78,9 @@ class Zoo:
         for f in self.fences:
             if f.animals != []:
                 print(f"Fence(area={f.area}, temperature={f.temperature}, habitat={f.habitat})")
-                print("with animals:")
+                print("\nwith animals:")
                 for a in f.animals:
-                    print(f"Animal(name={a.name}, species={a.species}, age={a.age})")
+                    print(f"Animal(name={a.name}, species={a.species}, age={a.age})\n")
                 print("#" * 30)
 
 
