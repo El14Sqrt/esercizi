@@ -13,6 +13,7 @@ class Animal:
         self.gabbia = None
 
 
+
 class Fence:
     def __init__(self, area:float, temperature:float, habitat:str):
         self.area=area #diminuisce ogni volta che faccio add_animal
@@ -29,16 +30,19 @@ class ZooKeeper:
         self.surname=surname
         self.id=id
     
+
     def add_animal(self, animal: Animal, fence: Fence):   #controllo habitat -> controllo area animale
         if animal.preferred_habitat == fence.habitat and animal.area_animal <= fence.area: 
             fence.animals.append(animal)
             fence.area -= animal.area_animal
             animal.gabbia = fence
 
+
     def remove_animal(self, animal: Animal, fence: Fence):
         if animal in fence.area:
             fence.animals.remove(animal)
             fence.area += animal.area_animal
+
 
     def clean(self, fence: Fence):
         clean_time: float =  (fence.total_area - fence.area) / fence.area
@@ -46,7 +50,8 @@ class ZooKeeper:
             return fence.total_area
         else:
             return clean_time
-        
+
+
     def feed(self, animal: Animal):
         if animal.gabbia + animal.area_animal >= (animal.height + animal.height * 0.02) * (animal.width + animal.width * 0.02):
             animal.healt += (animal.healt*1/100)
@@ -61,6 +66,7 @@ class Zoo:
         self.fences=fences
         self.zoo_keepers=zoo_keepers
         self.animals=fence.animals
+    
     
     def describe_zoo(self):
         print("Guardians:")
