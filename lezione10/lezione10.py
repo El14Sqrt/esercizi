@@ -56,25 +56,39 @@ print("stipendio: ", calcola_stipendio(60)) # --> 700.0
 #   d) 19, 27, 35, 43, 51
 
 
+
 def print_seq(): 
     
     print("Sequenza a):")
+    seq_a: list = []
     for i in range(1, 8):
+        seq_a.append(i)
+    for i in seq_a:
         print(i)
 
-    print("Sequenza b):")
-    # SCRIVI QUI IL TUO CICLO
-    print()
+    print("\nSequenza b):")
+    seq_b: list = []
+    for i in range(3, 24, 5):
+        seq_b.append(i)
+    for i in seq_b:
+        print(i)
 
-    print("Sequenza c):")
-    # SCRIVI QUI IL TUO CICLO
-    print()
+    print("\nSequenza c):")
+    seq_c: list = []
+    for i in range(-10, 21, 6):
+        seq_c.append(i)
+    seq_c.reverse()
+    for i in seq_c:
+        print(i)
 
-    print("Sequenza d):")
-    # SCRIVI QUI IL TUO CICLO
-    print()
-    
-    return
+    print("\nSequenza d):")
+    seq_d: list = []
+    for i in range(19, 52, 8):
+        seq_d.append(i)
+    for i in seq_d:
+        print(i)
+
+
 
 #ESERCIZIO 5
 #Scrivere una funzione chiamata integerPower che, dati in input una base e un esponente, 
@@ -107,4 +121,11 @@ print("lunghezza ipotenusa: ", hypotenuse(3.0, 4.0)) # --> 5.0
 print("lunghezza ipotenusa: ", hypotenuse(8.0, 15.0)) # --> 17.0
 
 #ESERCIZIO 7
-#
+#Scrivi una funzione che rimuove tutti i duplicati da una lista, contenente sia numeri che lettere, 
+#mantenendo l'ordine originale degli elementi.
+
+def remove_duplicates(...) -> list:
+    
+
+print(remove_duplicates([1, 2, 3, 1, 2, 4])) #--> [1, 2, 3, 4]
+print(remove_duplicates([4, 5, 'a', 4, 6])) #--> [4, 5, 'a', 6]
