@@ -69,7 +69,7 @@ print(remove_duplicates([4, 5, 'a', 4, 6]))
 #La rotazione verso sinistra significa che ciascun elemento della lista viene spostato a sinistra di una posizione 
 #e l'elemento iniziale viene spostato alla fine della lista. Per la rotazione utilizzare lo slicing 
 #e gestire il caso in cui il numero specificato di posizioni sia maggiore della lunghezza della lista.
-"""
+
 def rotate_left(elements: list, k: int) -> list:
     k = k % len(elements)  # Calcola il numero effettivo di posizioni da ruotare
     rotated_elements = elements[k:] + elements[:k]
@@ -77,7 +77,7 @@ def rotate_left(elements: list, k: int) -> list:
 
 print(rotate_left([1, 2, 3, 4, 5], 2))
 print(rotate_left([1, 2, 3, 4, 5], 8))
-"""
+
 
 #ESERCIZIO 6
 #Scrivi una funzione che, data una lista, ritorni un dictionary che mappa ogni elemento alla sua frequenza nella lista.
