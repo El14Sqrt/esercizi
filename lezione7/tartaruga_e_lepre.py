@@ -1,19 +1,19 @@
 #LA TARTARUGA E LA LEPRE
 
-#lunghezza percorso: 70 quadrati
-#1 = inizio , 70 = traguardo
-# T = tartaruga , H = lepre
-
 import random
+
 
 global T
 T = 1                           #posizione iniziale tartaruga
 global H
 H = 1                           #posizione inziale lepre
 
+posizioni = list("_" * 70)      #lunghezza percorso
+
+
 
 class Tartaruga:
-    def __init__(self) -> None:
+    def __init__(self):
         self.T = T
         
 
@@ -32,7 +32,7 @@ class Tartaruga:
 
 
 class Lepre:
-    def __init__(self) -> None:
+    def __init__(self): 
         self.H = H
         
 
@@ -57,13 +57,16 @@ class Lepre:
         else:
             H = 1
 
+
+
+
 class Mosse:
-    def __init__(self, lepre: Lepre, tartaruga: Tartaruga) -> None:
+    def __init__(self, lepre: Lepre, tartaruga: Tartaruga):
         self.lepre = lepre
         self.tartaruga = tartaruga        
 
     
-    def mosse_tartaruga(self, tartaruga):
+    def mosse_tartaruga(self, tartaruga: Tartaruga):
         percentuale = random.randint(1, 10)
 
         if 1 <= percentuale <= 5:
@@ -74,7 +77,7 @@ class Mosse:
             tartaruga.passo_lento()
 
 
-    def mosse_lepre(self, lepre):
+    def mosse_lepre(self, lepre: Lepre):
         percentuale = random.randint(1, 10)
 
         if 1 <= percentuale <= 2:
@@ -90,11 +93,34 @@ class Mosse:
         
 
 
-percorso = list(range(1,71))    #lunghezza percorso
-posizioni = list("_" * 70)
-
-
 
 def inizio_gara():
     print("BANG !!!!! AND THEY'RE OFF !!!!!")
+    while True:
+        Mosse.mosse_lepre()
+        Mosse.mosse_tartaruga()
+        if H in posizioni and T in posizioni:
+            posizioni.remove(H)
+            posizioni.remove(T)
+            posizioni.append("_")
+            posizioni.append("_")
+            if H == T:
+                posizioni[H] = "OUCH!!!"
+            else:
+                posizioni[H] = H
+                posizioni[T] = T
+        elif "OUCH!!!" in posizioni:
+            posizioni.remove("OUCH!!!")
+            posizioni.append("_")
+            if H == T:
+                posizioni[H] = "OUCH!!!"
+            else:
+                posizioni[H] = H
+                posizioni[T] = T
+        else:
+            posizioni[H] = H
+            posizioni[T] = T
+        
+        print(posizioni)
 
+inizio_gara()
