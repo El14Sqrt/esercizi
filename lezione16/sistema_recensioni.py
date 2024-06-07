@@ -83,7 +83,7 @@ class Libro(Media):
         super().__init__(titolo)
 
         self.autore = autore
-        self.elenco_film = list()
+        self.elenco_film: list = []
 
     def get_author(self):
         return self.autore
