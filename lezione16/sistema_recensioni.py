@@ -49,7 +49,7 @@ class Media:
 
     def recensione(self):
         print("Titolo: ", self.get_title())
-        print("Voto medio: ", self.media_voti)
+        print("Voto medio: ", self.get_media())
         print("Giudizio: ", self.get_rate())
         print("Terribile: ", self.rate_percentage(1))
         print("Terribile: ", self.rate_percentage(2))
@@ -57,18 +57,47 @@ class Media:
         print("Terribile: ", self.rate_percentage(4))
         print("Terribile: ", self.rate_percentage(5))
 
+
+
 class Film(Media):
     def __init__(self, titolo: str) -> None:
         super().__init__(titolo)
+
+        self.regista = str
         self.elenco_libri = list()
+
+    def set_director(self, regista):
+        self.regista = regista
+
+    def get_director(self):
+        return self.regista
+    
 
 
 class Libro(Media):
-    def __init__(self, titolo: str) -> None:
+    def __init__(self, titolo: str, autore:str) -> None:
         super().__init__(titolo)
+
+        self.autore = autore
         self.elenco_film = list()
 
+    def get_author(self):
+        return self.autore
+    
 
-libro_1: Libro = Libro()
-film_1: Film = Film()
+libro_1: Libro = Libro("Dieci piccoli indiani", "Agatha Christie")
+film_1: Film = Film("Oppenheimer")
 
+libro_1.aggiungi_valutazione(3)
+libro_1.aggiungi_valutazione(4)
+libro_1.aggiungi_valutazione(4)
+libro_1.aggiungi_valutazione(5)
+libro_1.aggiungi_valutazione(5)
+libro_1.aggiungi_valutazione(5)
+libro_1.aggiungi_valutazione(3)
+libro_1.aggiungi_valutazione(5)
+libro_1.aggiungi_valutazione(4)
+
+libro_1.aggiungi_valutazione(7)
+
+libro_1.recensione()
