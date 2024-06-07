@@ -52,10 +52,10 @@ class Media:
         print("Voto medio: ", self.get_media())
         print("Giudizio: ", self.get_rate())
         print("Terribile: ", self.rate_percentage(1))
-        print("Terribile: ", self.rate_percentage(2))
-        print("Terribile: ", self.rate_percentage(3))
-        print("Terribile: ", self.rate_percentage(4))
-        print("Terribile: ", self.rate_percentage(5))
+        print("Brutto: ", self.rate_percentage(2))
+        print("Normale: ", self.rate_percentage(3))
+        print("Bello: ", self.rate_percentage(4))
+        print("Grandioso: ", self.rate_percentage(5))
 
 
 
