@@ -1,7 +1,7 @@
 class Media:
 
-    def __init__(self) -> None:
-        self.titolo = str
+    def __init__(self, titolo: str) -> None:
+        self.titolo = titolo
         self.review = list()
 
 
@@ -58,14 +58,17 @@ class Media:
         print("Terribile: ", self.rate_percentage(5))
 
 class Film(Media):
-    def __init__(self) -> None:
-        super().__init__()
+    def __init__(self, titolo: str) -> None:
+        super().__init__(titolo)
         self.elenco_libri = list()
 
 
 class Libro(Media):
-    def __init__(self) -> None:
-        super().__init__()
+    def __init__(self, titolo: str) -> None:
+        super().__init__(titolo)
         self.elenco_film = list()
 
+
+libro_1: Libro = Libro()
+film_1: Film = Film()
 
