@@ -16,6 +16,7 @@ class Media:
     def aggiungi_valutazione(self, voto:int):
         if 1 <= voto <= 5:
             self.review.append(voto)
+            return "Il voto è stato aggiunto correttamente"
         else:
             return "Il voto deve essere un numero compreso tra 1 e 5"
     
@@ -25,9 +26,12 @@ class Media:
 
         n = len(self.review)
         somma_voti = sum(self.review)
-        media_voti: float = somma_voti / n
-        return media_voti
-    
+        if n > 0:
+            media_voti: float = somma_voti / n
+            return media_voti
+        else:
+            return None
+        
 
     def get_rate(self):
         if 0 <= self.media_voti <= 1.5:
@@ -63,8 +67,8 @@ class Film(Media):
     def __init__(self, titolo: str) -> None:
         super().__init__(titolo)
 
-        self.regista = str
-        self.elenco_libri = list()
+        self.regista: str = ""
+        self.elenco_libri: list = []
 
     def set_director(self, regista):
         self.regista = regista
